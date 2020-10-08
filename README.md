@@ -34,6 +34,25 @@ mvn clean install
 
 O comando irá baixar todas as dependências do projeto e criar um diretório *target* com os artefatos construídos, que incluem o arquivo jar do projeto. Além disso, serão executados os testes unitários, e se algum falhar, o Maven exibirá essa informação no console.
 
+### Executando
+
+Após construir o projeto, entre na pasta '...\marvel-api\target', execute os comandos abaixo.
+
+```shell
+java -jar marvel-api-0.0.1-SNAPSHOT.jar
+```
+
+O comando irá subir o projeto onde será possível acessar as url´s abaixo pelo browser ou por outras ferramentas de chamada de serviços Rest, por exemplo o Postman.
+
+```shell
+http://localhost:8080/v1/public/characters
+http://localhost:8080/v1/public/characters/{characterId}
+http://localhost:8080/v1/public/characters/{characterId}/comics
+http://localhost:8080/v1/public/characters/{characterId}/events
+http://localhost:8080/v1/public/characters/{characterId}/series
+http://localhost:8080/v1/public/characters/{characterId}/stories
+```
+
 ## Features
 
 O projeto pode ser usado como modelo para iniciar o desenvolvimento de um projeto Java usando o Spring Boot, criando endpoints disponibilizando serviços REST, como criar Testes de integração e da API.
